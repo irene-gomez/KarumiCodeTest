@@ -15,5 +15,11 @@
   "bugs": {
     "url": "https://github.com/irene-gomez/KarumiCodeTest/issues"
   },
-  "homepage": "https://github.com/irene-gomez/KarumiCodeTest#readme"
+  "homepage": "https://github.com/irene-gomez/KarumiCodeTest#readme",
+  "devDependencies": {
+    "browser-sync": "^2.26.7",
+    "del": "^5.1.0",
+    "gulp": "^4.0.2",
+    "gulp-html-tag-include": "^1.0.1"
+  }
 }
