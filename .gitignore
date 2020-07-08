@@ -1,1 +1,7 @@
 /node_modules
+
+# Public folder
+public
+
+# Thumbnails
+._*
