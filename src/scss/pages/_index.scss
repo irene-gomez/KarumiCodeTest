@@ -1,0 +1,7 @@
+.container {
+    min-width: 350px;
+    padding: 2rem;
+    border-radius: 8px;
+    @include centered();
+    border: 2px solid $colorNeutral;
+}
