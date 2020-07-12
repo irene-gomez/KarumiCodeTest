@@ -1,0 +1,13 @@
+.container {
+    min-width: 350px;
+    padding: 3rem 2.6rem;
+    border-radius: 8px;
+    @include centered();
+    border: 2px solid $colorNeutral;
+
+    & > img {
+        display: block;
+        margin: 0 auto;
+        padding: 4rem 0;
+    }
+}

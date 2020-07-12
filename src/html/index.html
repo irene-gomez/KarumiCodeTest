@@ -3,6 +3,7 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="./assets/css/main.css">
     <title>Karumi Code Test</title>
 </head>
 <body>
@@ -10,13 +11,13 @@
         <img src="./assets/images/karumi-logo.jpg" alt="Karumi">
         <form id="login-form">
             <div class="form__item">
-                <label for="username">Username</label>
-                <input id="username" name="username" type="text" required>
+                <!-- <label class="form__item--label" for="username">Username</label> -->
+                <input class="form__item--input" id="username" name="username" type="text" placeholder="Username" required>
             </div>
 
             <div class="form__item">
-                <label for="password">Password</label>
-                <input id="password" name="password" type="password" required>
+                <!-- <label class="form__item--label" for="password">Password</label> -->
+                <input class="form__item--input" id="password" name="password" type="password" placeholder="Password" required>
             </div>
 
             <button class="btn__login" type="submit">Login</button>
