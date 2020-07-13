@@ -9,6 +9,7 @@ const plumber = require('gulp-plumber');
 const notify = require('gulp-notify');
 const autoprefixer = require('gulp-autoprefixer');
 const uglify = require('gulp-uglify-es').default;
+const concat = require('gulp-concat');
 
 gulp.task('bs-reload', done => {
 	browserSync.reload();
