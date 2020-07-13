@@ -26,11 +26,13 @@
     "del": "^5.1.0",
     "gulp": "^4.0.2",
     "gulp-autoprefixer": "^7.0.1",
+    "gulp-concat": "^2.6.1",
     "gulp-html-tag-include": "^1.0.1",
     "gulp-notify": "^3.2.0",
     "gulp-plumber": "^1.2.1",
     "gulp-sass": "^4.1.0",
     "gulp-sourcemaps": "^2.6.5",
+    "gulp-uglify-es": "^2.0.0",
     "jest": "^26.1.0",
     "json-server": "^0.16.1"
   }
