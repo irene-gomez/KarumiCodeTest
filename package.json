@@ -30,6 +30,7 @@
     "gulp-plumber": "^1.2.1",
     "gulp-sass": "^4.1.0",
     "gulp-sourcemaps": "^2.6.5",
+    "jest": "^26.1.0",
     "json-server": "^0.16.1"
   }
 }
