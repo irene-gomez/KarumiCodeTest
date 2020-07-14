@@ -1,19 +1,24 @@
 {
-  "posts": [
+  "users": [
     {
       "id": 1,
-      "title": "json-server",
-      "author": "typicode"
-    }
-  ],
-  "comments": [
+      "name": "user1",
+      "password": "1234"
+    },
     {
-      "id": 1,
-      "body": "some comment",
-      "postId": 1
+      "id": 2,
+      "name": "user2",
+      "password": "1234"
+    },
+    {
+      "id": 3,
+      "name": "user3",
+      "password": "1234"
+    },
+    {
+      "id": 4,
+      "name": "user4",
+      "password": "1234"
     }
-  ],
-  "profile": {
-    "name": "typicode"
-  }
+  ]
 }

@@ -8,6 +8,8 @@ const sourcemaps = require('gulp-sourcemaps');
 const plumber = require('gulp-plumber');
 const notify = require('gulp-notify');
 const autoprefixer = require('gulp-autoprefixer');
+const uglify = require('gulp-uglify-es').default;
+const concat = require('gulp-concat');
 
 gulp.task('bs-reload', done => {
 	browserSync.reload();
@@ -67,12 +69,35 @@ gulp.task('images-dist', done => {
 	done();
 });
 
+gulp.task('js', done => {
+	gulp
+		.src(config.js.src)
+		.pipe(sourcemaps.init())
+		.pipe(plumber({ errorHandler: notify.onError('Error: <%= error.message %>') }))
+		.pipe(concat('main.js'))
+		.pipe(sourcemaps.write('./'))
+		.pipe(gulp.dest(config.js.dest))
+		.pipe(browserSync.reload({ stream: true }));
+	done();
+});
+
+gulp.task('js-dist', done => {
+	gulp
+		.src(config.js.src)
+		.pipe(plumber({ errorHandler: notify.onError('Error: <%= error.message %>') }))
+		.pipe(concat('main.js'))
+		.pipe(uglify())
+		.pipe(gulp.dest(config.js.dist));
+	done();
+});
+
 gulp.task('default',
-	gulp.series(['clean', 'html', 'css', 'images'], done => {
+	gulp.series(['clean', 'html', 'css', 'images', 'js'], done => {
 		browserSync.init({ server: { baseDir: './public/' } });
 		gulp.watch(config.watch.html, gulp.series(['html', 'bs-reload']));
 		gulp.watch(config.css.src, gulp.series('css'));
 		gulp.watch(config.images.src, gulp.series(['images', 'bs-reload']));
+		gulp.watch(config.js.src, gulp.series(['js', 'bs-reload']));
 		done();
 	})
 );
@@ -83,7 +108,8 @@ gulp.task('docs',
 			'clean-dist',
 			'html-dist',
 			'css-dist',
-			'images-dist'
+			'images-dist',
+			'js-dist',
 		],
 		done => done()
 	)
