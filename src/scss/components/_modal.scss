@@ -1,0 +1,28 @@
+.modal_wrapper {
+    min-width: 100vw;
+    min-height: 100vh;
+    background-color: rgba(0, 0, 0, .5);
+    position: fixed;
+    top: 0;
+    left: 0;
+}
+
+.alert {
+    position: relative;
+    max-width: 450px;
+    background-color: $colorNeutral;
+    @include centered();
+    border-radius: 6px;
+    padding: 1rem;
+
+    &__close {
+        position: absolute;
+        top: -12px;
+        right: -9px;
+        cursor: pointer;
+
+        &--size {
+            font-size: 26px;
+        }
+    }
+}
