@@ -16,7 +16,7 @@ This proyect use [Node 12.18.1 & npm 6.14.5](https://nodejs.org/es/download/)
 
 4. To launch the project and see it in the browser:
     * First you must launch the JSON server: `npm run db:server`
-    * Once you have the server launched you can start the web: `npm start`
+    * Once the server has been launched, in another terminal, you can start the web: `npm start`
 
 5. To access correctly through the login, there are several users:
 
