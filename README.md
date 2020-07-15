@@ -29,5 +29,5 @@ This proyect use [Node 12.18.1 & npm 6.14.5](https://nodejs.org/es/download/)
 
 ## Built with 🛠️
 
-This project is created with [Gulp](https://github.com/gulpjs/gulp) and [JSON Server](https://github.com/typicode/json-server) to create a fake api.
+This project is created with [Gulp](https://github.com/gulpjs/gulp) and [JSON Server](https://github.com/typicode/json-server) to create a fake API.
 >You can learn more in [Gulp documentation](https://gulpjs.com/).
