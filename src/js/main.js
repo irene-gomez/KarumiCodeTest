@@ -3,6 +3,7 @@
 const btnLogin = document.querySelector('.btn__login');
 const inputUsernameEl = document.querySelector('#username');
 const inputPasswordEl = document.querySelector('#password');
+const bodyEl = document.body;
 const ENDPOINT = 'http://localhost:3000/users';
 
 const compareData = data => {
@@ -13,10 +14,41 @@ const compareData = data => {
 	if(user) {
 		window.location.href = '/registered.html';
 	} else {
-		alert('The user doesn\'t exist');
+		createModal();
 	}
 
 };
+
+const createModal = () => {
+	const wrapperModalEl = document.createElement('div');
+	wrapperModalEl.classList.add('modal_wrapper');
+
+	const modalEl = document.createElement('div');
+	modalEl.classList.add('alert');
+
+	const titleEl = document.createElement('p');
+	const textTitle = document.createTextNode('The user doesn\'t exist.');
+	
+	const closeEl = document.createElement('div');
+	closeEl.classList.add('alert__close');
+	const closeImg = document.createElement('i');
+	closeImg.classList.add('fas');
+	closeImg.classList.add('fa-times');
+	closeImg.classList.add('alert__close--size');
+
+	closeEl.appendChild(closeImg);
+	titleEl.appendChild(closeEl);
+	titleEl.appendChild(textTitle);
+	modalEl.appendChild(titleEl);
+	wrapperModalEl.appendChild(modalEl);
+	bodyEl.appendChild(wrapperModalEl);
+
+	closeEl.addEventListener('click', function() {
+		closeModal(wrapperModalEl);
+	})
+}
+
+const closeModal = element =>element.remove();
 
 function getUsers() {
 	fetch(ENDPOINT)
